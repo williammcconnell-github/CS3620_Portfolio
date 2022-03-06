@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Hobby
+from .models import Portfolio
 
 
 # Create your views here.
@@ -11,11 +13,13 @@ def home(request):
 
 
 def hobbies(request):
-    return HttpResponse("")
+    hobby_list = Hobby.objects.all()
+    return HttpResponse(hobby_list)
 
 
 def portfolio(request):
-    return HttpResponse("")
+    portfolio_list = Portfolio.objects.all()
+    return HttpResponse(portfolio_list)
 
 
 def contact(request):
