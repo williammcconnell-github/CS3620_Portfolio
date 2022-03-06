@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class PortfoliodatabaseConfig(AppConfig):
+class PortfolioDatabaseConfig(AppConfig):
     name = 'PortfolioDatabase'
