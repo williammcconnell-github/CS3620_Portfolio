@@ -1,0 +1,74 @@
+body {
+    font-family: 'Cutive';
+    background-color: #f4f7f6;
+}
+
+.page-title:after,.page-title:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    height: 5px;
+}
+
+.card {
+    background-color: white;
+    border-radius: .55rem;
+}
+
+.btn-success {
+    border-style: solid;
+    border-width: medium;
+    border-color: rgba(33,37,31,0);
+    box-shadow: 3px 4px rgba(33,37,31,.15);
+}
+
+.btn-success:hover {
+    border-color: rgba(33,37,31,1);
+    box-shadow: 3px 4px rgba(33,37,31,.40);
+}
+
+img.card {
+    border-width: medium;
+    border-style: outset;
+}
+
+.zoom {
+    transition: transform .2s
+}
+
+.zoom:hover {
+    transform: scale(1.2)
+}
+
+.email-link {
+    text-decoration: none;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.animation-typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid black; /* The typewriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation:
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}

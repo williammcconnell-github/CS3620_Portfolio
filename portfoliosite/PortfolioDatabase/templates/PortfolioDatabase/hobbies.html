@@ -10,20 +10,29 @@
 </head>
 <body>
 {% block body %}
-{% for hobby in hobby_list %}
-    <div class="row align-items-center">
-        <div class="col-md-3 offset-md-2">
-            <img class="card" height="150px" src="{{ hobby.hobby_image }}">
+    <div class="container mt-3">
+        <div class="row">
+            <h1 class="text-center page-title">Hobbies</h1>
         </div>
-        <div class="col-md-4">
-            <h3>{{ hobby.hobby_name }}</h3>
-            <h5>{{ hobby.hobby_desc }}</h5>
-        </div>
-        <div class="col-md-2">
-            <a href="{% url 'PortfolioDatabase:hobbyDetail' hobby.id %}" class="btn btn-success">Details</a>
-        </div>
+        {% for hobby in hobby_list %}
+            <div class="row align-items-center">
+                <div class="col-md-3 offset-md-2">
+                    <img class="card mt-1 zoom" height="150px" src="{{ hobby.hobby_image }}" alt="{{ hobby.hobby_name }}">
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">{{ hobby.hobby_name }}</h3>
+                            <h5 class="card-text">{{ hobby.hobby_desc }}</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <a href="{% url 'PortfolioDatabase:hobbyDetail' hobby.id %}" class="btn btn-success">Details</a>
+                </div>
+            </div>
+        {% endfor %}
     </div>
-{% endfor %}
 {% endblock %}
 </body>
 </html>
