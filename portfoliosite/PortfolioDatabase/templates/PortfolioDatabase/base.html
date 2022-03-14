@@ -9,28 +9,29 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a href="#" class="navbar-brand">Portfolio Database</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="navbar-collapse collapse" id="navigation">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="{% url 'PortfolioDatabase:home' %}">Home</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="{% url 'PortfolioDatabase:hobbies' %}">Hobbies</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="{% url 'PortfolioDatabase:portfolios' %}">Portfolios</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="{% url 'PortfolioDatabase:contact' %}">Contact</a>
-            </li>
-        </ul>
+    <div class="container-fluid">
+        <a href="#" class="navbar-brand">Portfolio Database</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navigation">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'PortfolioDatabase:home' %}">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'PortfolioDatabase:hobbies' %}">Hobbies</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'PortfolioDatabase:portfolios' %}">Portfolios</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'PortfolioDatabase:contact' %}">Contact</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
-
 {% block body %}
 {% endblock %}
 </body>

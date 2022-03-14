@@ -11,11 +11,18 @@
 <body>
 {% block body %}
 {% for hobby in hobby_list %}
-    <ul>
-        <li>
-            <a href="{% url 'PortfolioDatabase:hobbyDetail' hobby.id %}">{{ hobby.id }} -- {{ hobby.hobby_name }}</a>
-        </li>
-    </ul>
+    <div class="row align-items-center">
+        <div class="col-md-3 offset-md-2">
+            <img class="card" height="150px" src="{{ hobby.hobby_image }}">
+        </div>
+        <div class="col-md-4">
+            <h3>{{ hobby.hobby_name }}</h3>
+            <h5>{{ hobby.hobby_desc }}</h5>
+        </div>
+        <div class="col-md-2">
+            <a href="{% url 'PortfolioDatabase:hobbyDetail' hobby.id %}" class="btn btn-success">Details</a>
+        </div>
+    </div>
 {% endfor %}
 {% endblock %}
 </body>
