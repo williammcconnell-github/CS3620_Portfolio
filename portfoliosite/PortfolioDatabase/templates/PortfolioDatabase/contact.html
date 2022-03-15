@@ -14,8 +14,28 @@
         <div class="row">
             <h1 class="text-center page-title">Contact</h1>
         </div>
+        <div class="row mt-2">
+            <h3 class="text-center">Questions or Comments?</h3>
+        </div>
         <div class="row">
-            <p>williammcconnell@mail.wsu.edu</p>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <form method="POST">
+                            {% csrf_token %}
+                            {{ form }}
+                            <button type="submit" class="btn btn-primary mt-3">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                    <a class="email-link" href="mailto: williammcconnell@mail.weber.edu">williammcconnell@mail.weber.edu</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}

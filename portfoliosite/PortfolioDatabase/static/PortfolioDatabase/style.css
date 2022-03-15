@@ -16,14 +16,14 @@ body {
     border-radius: .55rem;
 }
 
-.btn-success {
+.btn-success, .btn-primary, .btn-danger {
     border-style: solid;
     border-width: medium;
     border-color: rgba(33,37,31,0);
     box-shadow: 3px 4px rgba(33,37,31,.15);
 }
 
-.btn-success:hover {
+.btn-success:hover, .btn-primary:hover, .btn-danger:hover {
     border-color: rgba(33,37,31,1);
     box-shadow: 3px 4px rgba(33,37,31,.40);
 }

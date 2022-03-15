@@ -14,6 +14,11 @@
         <div class="row">
             <h1 class="text-center page-title">Portfolios</h1>
         </div>
+        <div class="row">
+            <div class="col-md-2 offset-md-5">
+                <a href="{% url 'PortfolioDatabase:create_portfolio' %}" class="btn btn-warning">+ Create Portfolio</a>
+            </div>
+        </div>
         {% for portfolio in portfolio_list %}
             <div class="row align-items-center">
                 <div class="col-md-3 offset-md-2">
@@ -29,6 +34,9 @@
                 </div>
                 <div class="col-md-2">
                     <a href="{% url 'PortfolioDatabase:portfolioDetail' portfolio.id %}" class="btn btn-success">Details</a>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'PortfolioDatabase:update_portfolio' portfolio.id %}" class="btn btn-primary">Edit</a>
+                    {% endif %}
                 </div>
             </div>
         {% endfor %}
